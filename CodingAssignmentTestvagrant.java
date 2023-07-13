@@ -63,7 +63,16 @@ public class Main {
 
         store.printStore();
 
-        List<String> songs = store.getRecentlyPlayedSongs("user1");
-        System.out.println("User1 recently played songs: " + songs);
+        List<String> songsUser1 = store.getRecentlyPlayedSongs("user1");
+        List<String> songsUser2 = store.getRecentlyPlayedSongs("user2");
+        List<String> songsUser3 = store.getRecentlyPlayedSongs("user3");
+        System.out.println("User1 recently played songs: " + songsUser1);
+        System.out.println("User1 recently played songs: " + songsUser2);
+        System.out.println("User1 recently played songs: " + songsUser3);
+        
+        assert songsUser1.equals(Arrays.asList("S2", "S3", "S4"));
+        assert songsUser2.equals(Arrays.asList("S3", "S2", "S4"));
+        assert songsUser2.equals(Arrays.asList("S4", "S3", "S2"));
+        assert songsUser3.equals(Arrays.asList("S2", "S1", "S3"));
     }
 }
