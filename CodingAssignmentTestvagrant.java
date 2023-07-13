@@ -70,6 +70,7 @@ public class Main {
         System.out.println("User1 recently played songs: " + songsUser2);
         System.out.println("User1 recently played songs: " + songsUser3);
         
+
         assert songsUser1.equals(Arrays.asList("S2", "S3", "S4"));
         assert songsUser2.equals(Arrays.asList("S3", "S2", "S4"));
         assert songsUser2.equals(Arrays.asList("S4", "S3", "S2"));
